@@ -39,7 +39,6 @@ stages:
           backendAzureRmKey: 'aks-base-tfstate'
           allowTelemetryCollection: false
       - task: TerraformTaskV4@4
-        
         displayName: Terraform Validation 
         inputs:
           provider: 'azurerm'
