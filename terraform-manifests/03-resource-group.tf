@@ -2,6 +2,7 @@
 # Updated 03-resource-group.tf
 
 resource "azurerm_resource_group" "aks_rg" {
-  name     = "${var.resource_group_name}-${var.environment}"
+  name     = "${replace(replace(lower(var.resource_group_name), " ", ""), "_", "-")}-${lower(replace(replace(var.environment, " ", ""), "_", "-"))}"
   location = var.location
 }
+
