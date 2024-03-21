@@ -12,16 +12,16 @@ variable "location" {
 
 # Azure Resource Group Name
 variable "resource_group_name" {
-  type        = string
+ # type        = string
   description = "This variable defines the Resource Group"
-  default     = "emma-capstone-terraform-aks-rg"
+  default     = "emma-terraform-aks"
 }
 
 # Azure AKS Environment Name (Single environment)
 variable "environment" {
   type        = string  
   description = "This variable defines the Environment"  
-  default     = "qa"  # Set a single environment as the default
+  #default     = "qa"  # Set a single environment as the default
 }
 
 # Terraform Resource to Create Azure Resource Group with Input Variables defined in variables.tf
