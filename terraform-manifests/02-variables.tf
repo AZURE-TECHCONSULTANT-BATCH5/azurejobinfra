@@ -21,7 +21,7 @@ variable "resource_group_name" {
 variable "environment" {
   type        = string  
   description = "This variable defines the Environment"  
-  #default     = ["dev", "prov", "qa"]  # Set a single environment as the default
+  default     = "qa"  # Set a single environment as the default
 }
 
 # Terraform Resource to Create Azure Resource Group with Input Variables defined in variables.tf
