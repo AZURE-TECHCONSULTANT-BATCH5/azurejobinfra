@@ -80,7 +80,7 @@ stages:
               displayName: 'Terraform apply'
               inputs:
                 provider: 'azurerm'
-                command: 'apply'
+                command: 'apply --auto-approve'
                 workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-manifests-out'
                 commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
                 environmentServiceNameAzureRM: 'terraform-aks-azurerm-svc-con'
